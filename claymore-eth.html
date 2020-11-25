@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<title>Claymore ETH: Пошаговая настройка (на примере Ethereum)</title>
+<meta charset="utf-8" />
+<link rel="canonical" href="https://claymoredualminer.com/claymore-eth" /> 
+<link rel="shortcut icon" href="items/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="Скачать и настроить Dualminer для добычи ETH. В примере рассмотрен пул Ethermine и пошаговая настройка для него." />
+
+<link rel="stylesheet" href="/css/ETH.css">
+<link rel="stylesheet" href="/css/global.base.css">
+<link rel="stylesheet" href="/css/global.styles.css">
+<link rel="stylesheet" href="/css/at.layout.css">
+
+
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-2');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53083204, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53083204" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika domain -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56512528, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56512528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<meta name="yandex-verification" content="1facbca6aff9a0eb" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKVRMS2');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics domain -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-4');
+</script>
+
+</head>
+<body>
+
+
+<div id="page-wrapper">
+  <div id="page" class="page at-mt eth-inner">
+
+
+<div id="menu-bar" class="nav clearfix">
+	<nav id="block-menu-menu-primary-menu" class="block block-menu menu-wrapper menu-bar-wrapper clearfix at-menu-toggle block-menu-primary-menu eth-menu" role="navigation">        
+
+		<div class="menu-toggle">
+			<ul class="menu clearfix">
+			<li class="leaf"><a href="https://claymoredualminer.com/ru" title="">Главная</a></li>
+				<li class="first leaf"><a href="#start" title="">Быстрый старт</a></li>
+				<li class="leaf"><a href="#download" title="">Скачать</a></li>
+
+			</ul>
+		</div>  
+	</nav>
+	</div>
+
+<section class="eth-header">
+	<div class="eth-header-flex">
+		<div class="eth-header-center eth-vi">
+			<div class="eth-header-composition">
+			<h2>Claymore's Dual Ethereum AMD+NVIDIA GPU Miner</h2>
+			<p class="eth-fast"><span class="green">Самый быстрый Ethereum</span>/Ethash майнер с <span class="green">самой низкой комиссией</span></p> 
+			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://bit.ly/2ZAYUjW">Скачать</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-art">
+<H1 class="eth-title"><a id="start">Claymore ETH. Настройка Dualminer</a></h1>
+	<div class="eth-vi2">
+	
+<p>Давайте рассмотрим инструменты, которые нужны вашему компьютеру для эффективной работы майнера. Вот все, что вам нужно для майнинга Ethereum:</p>
+<ol>
+	<li>Кошелек Ethereum для хранения всей вашей недавно найденной валюты;</li>
+	<li>Драйверы видеокарты;</li>
+	<li>Майнинг приложение (Claymore майнер);</li>
+	<li>Адрес майнинг-пула, если вы собираетесь майнить на майнинг-пуле;</li>
+	<li>Видеокарта (GPU) с объемом оперативной памяти не менее 3 ГБ;</li>
+	<li>Совместимая операционная система (Windows 7 или 10 64bit).</li>
+</ol>
+<h2>Создать цифровой кошелек</h2>
+<p>Вам нужно создать цифровой кошелек, в котором вы сможете хранить свой эфир. Вы можете следовать инструкциям по созданию кошелька <a href="https://blog.bitdegree.org/your-first-myetherwallet-c1a98f686f53" target="_blank" rel="nofollow">здесь.</a></p>
+<h2>Установка драйверов видеокарты</h2>
+<p>Когда ваш цифровой кошелек настроен и готов, пришло время обновить программное обеспечение на вашем компьютере. Процесс майнинга будет более прибыльным, если на вашем оборудовании будут установлены все последние обновления. Так что обновите ваши драйверы сейчас.</p>
+<h3>Для пользователей видеокарт AMD</h3>
+<p>Если у вас есть видеокарта AMD, вы можете скачать последние версии драйверов для вашей карты <a href="https://support.amd.com/en-us/download" target="_blank" rel="nofollow">здесь. </a></p>
+<h3>Для пользователей видеокарт Nvidia</h3>
+<p>Если у вас есть видеокарта Nvidia, вы можете скачать последние версии драйверов для вашей карты <a href="https://www.geforce.com/drivers" target="_blank" rel="nofollow">здесь</a> .</p>
+<p>Загрузите и установите драйверы в зависимости от того, какую видеокарту вы используете.</p>
+<h2>Установка программного обеспечения Ethereum для майнинга</h2>
+<ol>
+
+		<li>Перейдите на сайт Claymore для загрузки: <a href="https://claymoredualminer.com/ru">https://claymoredualminer.com/ru </a></li>
+
+
+
+<p>
+<img src="items/start/download.png" alt="download">
+</p>
+<ol>
+	<li>Загрузите последнюю версию Claymore dual miner. При нажатии на выделенную ссылку. На сегодняшний день самая последняя версия - 15.0. </li>
+	<li>Дождитесь окончания загрузки. Сохраните файл на рабочем столе для быстрого доступа.</li>
+	<li>Извлеките файлы Claymore v15.0 в папку на рабочем столе для быстрого доступа.</li>
+	<li>Откройте папку, которую вы только что извлекли, чтобы просмотреть файлы, она должна выглядеть следующим образом.<br />
+	<br />
+<p>
+<img src="items/start/files.png" alt="files">
+</p>
+</li>
+	<li>Щелкните правой кнопкой мыши на <strong>пакетном файле</strong></li>
+	<li>Нажмите <strong>Изменить</strong></li>
+</ol>
+<p>
+<img src="items/start/izmenit.png" alt="izmenit">
+</p>
+<ol>
+	<li>Отредактируйте файл с нужной монетой и вставьте следующие строки:</li>
+</ol>
+<p><br />
+<br />
+EthDcrMiner64.exe -epool -ewal -epsw x</p>
+<p>Выберите свой пул из одного из этих рекомендуемых майнинг-пулов Ethereum.</p>
+<p> </p>
+<p><strong>Примечание: эти адреса пула для региона Европы. Если вы живете в США или Азии, вы можете получить лучшие результаты, используя адреса, которые ближе к вашему региону. Посетите сайт пула и выясните, поддерживает ли этот пул ваш регион.</strong></p>
+<p>Вместо  &lt;Mining_Pool_Address&gt; введите адрес вашего пула.</p>
+<p>Вместо   &lt;Your_Ethereum_Wallet_Address&gt; введите адрес вашего кошелька:</p>
+<p>
+<img src="items/start/clear bat file.png" alt="clear bat file">
+</p>
+<p>Как только вы закончите, это должно выглядеть так:</p>
+<p>
+<img src="items/start/bat file.png" alt="bat file">
+</p>
+Пример:<br>
+<pre><code>EthDcrMiner64.exe -epool us1.ethermine.org:4444 -wal 0x9147460980c93629e775783148591b7d0a0cbf2d.Claymore -epsw x
+</code></pre>
+<strong><em> не копируйте адрес кошелека, который вы увидете на картинке, используйте свой собственный!</em></strong></p>
+<p> <em>если вы используете myetherwallet, вы можете найти свой адрес кошелька, зайдя на https://www.myetherwallet.com/ и проверить ​​адрес счета.</em></p>
+<p> </p>
+<p>
+<img src="items/start/ETH-wallet-address.png" alt="ETH-wallet-address">
+</p>
+<ol>
+	<li>Сохраните файл с новыми значениями, перейдя в <strong>файл -&gt; сохранить как</strong>
+	<p>
+<img src="items/start/save-as.png" alt="save-as">
+</p>
+	</li>
+	<li>Измените имя файла на start.bat
+	<p>
+<img src="items/start/start-1.png" alt="start-1">
+</p>
+	</li>
+	<li>В поле «Тип файла»: выберите <strong>Все файлы</strong></li>
+	<li>Нажмите «Сохранить» и нажмите « <strong>Да»</strong> , когда вас спросят, хотите ли вы заменить файл
+	<p>
+<img src="items/start/replace.png" alt="replace">
+</p>
+	</li>
+	<li>Дважды щелкните <strong>Start.bat,</strong> чтобы начать майнинг на свой кошелек
+<p>
+<img src="items/start/start-2.png" alt="start-2">
+</p>
+	</li>
+	<li>Если вы выполнили все шаги, описанные выше, вы должны увидеть этот экран.
+<p>
+<img src="items/start/success.png" alt="success">
+</p>
+	</li>
+</ol>
+<p>Это оно! Ваш компьютер сейчас добывает Ethereum. Оставьте этот экран открытым. Для этого примера мы использовали <a href="https://ethermine.org" target="_blank" rel="nofollow">пул </a><u>Ethermine</u> и <a href="https://www.myetherwallet.com/" target="_blank" rel="nofollow">MyEtherWallet</a> . Но вы можете использовать другие кошельки и другие майнинг пулы.</p>
+<h2>Как проверить, сколько вы добыли?</h2>
+<p>У каждого пула свой интерфейс, но принцип остается тем же. Вам нужно будет зайти на сайт вашего пула и ввести адрес вашего кошелька. Давайте используем Ethermine в качестве примера.</p>
+<p>Вы вводите свой адрес кошелька в строке поиска, и вы сможете увидеть всю информацию о ваших усилиях по добыче Ethereum. В случае  пула Ethermine, когда ваш баланс достигнет 0,01 ETH, он будет отправлен на адрес вашего кошелька, который вы ввели в файл start.bat ранее.</p>
+<h2>Как рассчитать прибыль</h2>
+<ul>
+	<li>Откройте ваш майнер и проверьте, сколько мегахашей в секунду отправляет ваше оборудование (Mh/s)</li>
+	<li>Мы видим, что наш один графический процессор GTX 1070 разгоняется до 32,2 Mh/s.<br />
+<p>
+<img src="items/start/check-mining.png" alt="check-mining">
+</p>
+	</li>
+	<li>Откройте калькулятор майнинга <a href="https://www.cryptocompare.com/mining/calculator/eth" target="_blank" rel="nofollow"> здесь.</a></li>
+	<li>Введите ваши Mh/s, стоимость электроэнергии и энергопотребление. Вы получите средние результаты, основанные на том, сколько стоит 1 ETH в то время.
+<p>
+<img src="items/start/eth-calculator.png" alt="eth-calculator">
+</p>
+	</li>
+</ul>
+<h2>Секреты и уловки</h2>
+<ul>
+	<li>Если вы планируете оставить свой компьютерный майнинг на длительные периоды времени, вот несколько вещей, которые вы можете сделать, чтобы избежать простоев.</li>
+	<li>Настройки питания компьютера: по умолчанию, если ваш компьютер не используется в течение длительного периода времени, он «перейдет в спящий режим». Как только ваш компьютер перейдет в спящий режим, он прекратит майнинг. Чтобы избежать этого, перейдите к настройкам питания и убедитесь, что ваш компьютер никогда не уходит в спящий режим.</li>
+</ul>
+<p>Теперь ваш компьютер может работать весь день без сна.</p>
+<h2>Заключительные мысли</h2>
+<p>Используя Ethereum, вы помогаете ему оставаться децентрализованным и получать вознаграждение в процессе. Вы должны смотреть на Эфириум как на ценный актив для хранения или торговли. Технология blockchain и сеть Ethereum уже доказали свою ценность. Несколько децентрализованных приложений уже нашли успех. Реакция рынка кажется превосходной. Поскольку все больше людей начинают строить децентрализованные приложения на платформе, которую создал Ethereum, мы должны увидеть еще большие результаты в будущем!</p>
+
+
+
+<p class="vaz2">Проект Claymore представляет самые <strong>последние версии</strong> программного обеспечения (исправляет все ошибки и баги  предыдущих версий)! Поэтому если у Вас <strong>старая</strong> версия, мы настоятельно советуем <strong>скачать</strong> последнюю версию Claymore's по ссылкам ниже, так как с каждым выходом новой версии добыча Эфира становится <strong>выгоднее</strong>!</p>
+</div>
+</section>
+
+<section class="eth-down">
+<div class="eth-title whitez1"><a id="download">Начните добывать Ethereum с Claymore's Dual  Miner </a></div>
+<div class="eth-download">
+	<div class="eth-flex">	
+		<div class="eth-ver">	
+		Последняя версия - v15.0
+		MD5: D50CB658CDC8A79251BB968AB25F0390 *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
+		<span class="nev2">(<a href="https://bit.ly/3fws22o">Скачать для Linux</a>)</span>	
+		</div>
+		<div class="eth-get">
+		<span class="eth-password">Пароль: claymore</span>
+		<div class="eth-button down"><i class="far fa-arrow-alt-circle-down"></i>
+		<a href="https://bit.ly/2ZAYUjW">Скачать сейчас (Windows x64)</a>
+		</div>
+		<span class="eth-mirror">(<a href="https://mega.nz/file/JOoQHIpQ#AlMEFuHP9KAFqawIZBhO0UNFkL7mCKe6LX1ZO2f6VOs" target="_blank" rel="nofollow">Зеркало</a>)</span>
+		</div>	
+	</div>
+</div>
+</section>
+<section>
+</section>
+
+
+
+
+<!-- footer-->
+<section class="eth-foot">
+	<div class="">
+		<div class="eth-flex">
+			<div class="foot-itm community">
+				<p>Сообщество</p>
+				<ul>
+					<li><a href="https://blog.ethereum.org" target="_blank" rel="nofollow"><i class="fas fa-rss"></i> Блог</a>
+					</li>
+					<li><a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow"><i class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li><a href="https://www.youtube.com/user/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a>
+					</li>
+					<li><a href="https://www.reddit.com/r/ethereum" target="_blank" rel="nofollow"><i class="fab fa-reddit"></i> Reddit</a>
+					</li>
+					<li><a href="https://gitter.im/ethereum/home" target="_blank" rel="nofollow"><i class="fab fa-gitter"></i> Gitter</a>
+					</li>
+				</ul>
+			</div>
+					
+		<div class="foot-itm community">
+			<ul>
+				<li><a href="https://twitter.com/ethereum" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a>
+				</li>
+				<li><a href="https://ethereum.stackexchange.com" target="_blank" rel="nofollow"><i class="fab fa-stack-exchange"></i> Stack Exchange</a>
+				</li>
+				<li><a href="https://www.facebook.com/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook                </a>
+				</li>
+				<li><a href="https://ethereum.meetup.com" target="_blank" rel="nofollow"><i class="fab fa-meetup"></i> Встречи</a>
+				</li>
+			</ul>
+		</div>
+		
+			<div class="foot-itm developer-resources">
+			<p>Ресурсы для разработчиков</p>
+			<ul>
+				<li>What is Ether? <a href="#FAQ">Read our FAQ</a></li>
+				<li>Browse our source code on <a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow">GitHub</a></li>
+				<li>Read the <a href="http://www.ethdocs.org" target="_blank" rel="nofollow">documentation</a>
+		or <a href="https://github.com/ethereum/wiki/wiki" target="_blank" rel="nofollow">wiki</a></li>
+		<li>Learn <a href="https://solidity.readthedocs.io/en/v0.5.14/" target="_blank" rel="nofollow">Solidity</a></li>
+		<li>See the latest <a href="https://ethstats.net" target="_blank" rel="nofollow">data and network stats</a>
+		</li>
+		<li>Download our <a href="https://www.ethereum.org/assets" rel="nofollow">logo assets </a></li>
+		<li>Want to write about Ethereum? <a href="mailto:press@ethereum.org">Press inquiries</a>
+		</li>
+		<li>switch to the <a href="/ru">English language.</a>
+		</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-post-foot clearfix">
+	<div class="eth-vi2">
+		<div class="nev3 eth-left">Note, when downloading the Claymore Miner, Windows may issue a warning, but if you used Claymore Dual Miner download link you can ignore this.
+		</div>
+
+		<div class="nev3 eth-right">Disclaimer: This isn't an official Claymores site.  No binary files were affected.
+
+		All rights belong to their respective owners. © 2018-2021
+		</div>
+	</div>
+	<a href="https://claymoredualminer.com/cookie" class="eth-policy" target="_blank" rel="nofollow">Cookie Policy</a>
+</section>
+  </div>
+</div>  </body>
+</html>

@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<title>Настройка Claymore для Etherium под Nvidia [обновлено, 2021]</title>
+<meta charset="utf-8" />
+<link rel="canonical" href="https://claymoredualminer.com/nvidia-nastrojka-claymore-dlja-etherium" /> 
+<link rel="shortcut icon" href="items/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="что такое -Esm и что лучше всего подходит для этого в Клейморе" />
+
+<link rel="stylesheet" href="/css/ETH.css">
+<link rel="stylesheet" href="/css/global.base.css">
+<link rel="stylesheet" href="/css/global.styles.css">
+<link rel="stylesheet" href="/css/at.layout.css">
+
+
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-2');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53083204, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53083204" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika domain -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56512528, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56512528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<meta name="yandex-verification" content="1facbca6aff9a0eb" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKVRMS2');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics domain -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-4');
+</script>
+
+</head>
+<body>
+
+
+<div id="page-wrapper">
+  <div id="page" class="page at-mt eth-inner">
+
+
+<div id="menu-bar" class="nav clearfix">
+	<nav id="block-menu-menu-primary-menu" class="block block-menu menu-wrapper menu-bar-wrapper clearfix at-menu-toggle block-menu-primary-menu eth-menu" role="navigation">        
+
+		<div class="menu-toggle">
+			<ul class="menu clearfix">
+			<li class="leaf"><a href="https://claymoredualminer.com/ru" title="">Главная</a></li>
+				<li class="first leaf"><a href="#start" title="">Быстрый старт</a></li>
+				<li class="leaf"><a href="#download" title="">Скачать</a></li>
+			</ul>
+		</div>  
+	</nav>
+	</div>
+
+<section class="eth-header">
+	<div class="eth-header-flex">
+		<div class="eth-header-center eth-vi">
+			<div class="eth-header-composition">
+			<h2>Claymore's Dual Ethereum AMD+NVIDIA GPU Miner</h2>
+			<p class="eth-fast"><span class="green">Самый быстрый Ethereum</span>/Ethash майнер с <span class="green">самой низкой комиссией</span></p> 
+			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://bit.ly/2ZAYUjW">Скачать</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-art">
+<H1 class="eth-title"><a id="start">Настройка Claymore для Etherium на картах Nvidia</a></h1>
+	<div class="eth-vi2">
+<p>Шаг 1. Скачайте программу.</p>
+<p>Шаг 2. Распакуйте архив в любое место на вашем компьютере.</p>
+<p>В папке, содержащей майнер, вы должны создать (или просто отредактировать уже готовый) файл с расширением .bat. Вы можете сделать это в любом текстовом редакторе (например, Блокнот).</p>
+<p>Когда вы сохраняете файл, важно выбрать «Все файлы» в качестве типа файла, а не «txt». В противном случае у вас будет .bat.txt в конце имени файла, и майнер не сможет открыть этот файл.</p>
+<p>Ваш файл bat (скажем, он называется 1_Ehereum-nanopool.bat) должен содержать следующий текст:</p>
+<div class="vaz"><pre><code>EthDcrMiner64.exe -epool eth-eu2.nanopool.org:9999 - eworker <span class="eth-grn">ИМЯ_ФЕРМЫ</span> - ewal <span class="eth-grn">ВАШ_АДРЕС_КОШЕЛЬКА</span> -epsw x</code></pre></div>
+<p>ВАШ_АДРЕС_КОШЕЛЬКА можно найти в вашем кошельке или на бирже.</p>
+<p>ИМЯ_ФЕРМЫ - вы можете выбрать любое имя (например, MSI), но не переусердствуйте: оно должно быть не более 32 символов, содержать только буквы и цифры (без специальных символов, таких как $% »*; @).</p>
+<p>Как только файл будет готов, запустите его двойным щелчком мыши - майнинг уже запущен. Вы можете проверить статистику по пулу, набрав свой АДРЕС_КОШЕЛЬКА в поле поиска вверху.</p>
+
+<h2>Расширеное описание настроек</h2>
+<p>Вот несколько ссылок для скачивания, которые вам понадобятся, если вы хотите следовать этому руководству:</p>
+<ul>
+	<li>Последний драйвер nvidia (да, я говорю последний, почти все как говорят, чтобы использовать старую версию, это не правда) - 384.76, как я пишу: <a href="https://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="nofollow">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></li>
+	<li>Claymore Майнер</li>
+	<li>MSI afterburner для разгона : <a href="http://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip" target="_blank" rel="nofollow">http://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip</a></li>
+</ul>
+<p>
+<a href="items/examples/NVIDIA_Control_Panel_2.jpg" target="_blank">
+<img src="items/examples/NVIDIA_Control_Panel_2.jpg" alt="NVIDIA_Control_Panel_2"></a>
+</p>
+<h2>Установка и настройка драйвера nvidia</h2>
+<p>Установка последнего драйвера должна быть простой, но необходима некоторая насстройка. После установки драйвера перейдите в «Панель настройки Nvidia» (меню правой кнопки мыши на рабочем столе). Вы должны увидеть следующий экран (мой на французском языке, но я переведу для вас то, что нужно было настроить). Перейдите к настройке «3D Settings» =&gt; «Manage 3D» и:</p>
+
+<ul>
+	<li>Убедитесь, что «CUDA - GPU» установлен на «Все»</li>
+	<li>Установите "DSR - Factors" в "2x"</li>
+	<li>(и самое главное) Установите для параметра «Оптимизировать производительность вычислений» значение «Да»</li>
+</ul>
+<p>Теперь у вас есть драйверы nvidia, оптимизированные для майнинга.
+</p>
+<h2>Установка Claymore </h2>
+<p>Установка Claymore проста (просто распакуйте туда, куда вы хотите). Создайте новый файл в главном каталоге (mining_ether.bat):</p>
+<div class="vaz"><pre><code>setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+EthDcrMiner64.exe -epool eu2.ethermine.org:14444 -ewal 0x6cbdf1eb7e55c60a5fbcf8d09af98e6622c2b949 -epsw x -eworker claymore -mode 1 -allpools 1</code></pre></div>
+
+<ul>
+	<li>параметры setx предназначены для конфигурации графического процессора</li>
+	<li>-epool eu2.ethermine.org:14444: для использования пула эфира (вы можете использовать и другой пул)</li>
+	<li>-ewal 0x6cbdf1eb7e55c60a5fbcf8d09af98e6622c2b949: адрес вашего кошелька. УБЕДИТЕСЬ, ЧТОБЫ ИСПОЛЬЗОВАТЬ ВАШ АДРЕС</li>
+	<li>-epsw x: пароль для пула, если он у вас есть (на ethermine нет)</li>
+	<li>-eworker claymore: произвольное имя для вашего работника</li>
+	<li>-mode 1: майнить только эфир (без двойного майнинга - devfee составляет 1% для майнинга и 2% для двойного майнинга)</li>
+	<li>-allpools 1: необходим для майнинга на некоторых пулах</li>
+</ul>
+<h2>Разгон ядра видеокарты / памяти (pstate)</h2>
+<p>Начните майнинг, прежде чем следовать этой части.<br />
+Карты Nvidia имеют специальные механизмы для автоматической настройки частот графического процессора / памяти на основе фактической рабочей нагрузки графического процессора. </p>
+<p>Он называется pstate (Performance State). <br />
+P0 - это максимальное значение pstate, которое используется, например, в играх. </p>
+<p>При майнинге эфира драйверы nvidia не определяют эту рабочую нагрузку как интенсивную, а затем используют P2 pstate. </p>
+<p>Таким образом, ручное включение P0 поможет вам иметь больше MH/s (что говорит о том, что ваша карта обеспечивает максимальную производительность). </p>
+<p>Помните, pstate - это не разгон, а просто указание вашей карте работать на максимальной поддерживаемой скорости.</p>
+<p>Вы можете изменить pstate, используя nvidia-smi.exe (устанавливается с драйверами nvidia в C:\Program Files\NVIDIA Corporation\NVSMI).</p>
+<p>Проиллюстрируем это на GTX 970, но у вас должно быть другое значение в зависимости от вашей модели NVIDIA. <br />
+Вы должны быть "администратором" для изменения pstate. <br />
+Просто запустите «cmd» от имени администратора (введите cmd на панели «Кортана» и в окне «Выполнить» щелкните правой кнопкой мыши, чтобы запустить Командную строку от имени администратора). <br />
+Первая команда предназначена для проверки вашего фактического состояния. <br />
+<code>nvidia-smi.exe -q -d PERFORMANCE</code>
+Вы должны посмотреть «Состояние производительности». Это должно быть P2. <br />
+У вас должно быть что-то вроде этого (наша карта на P0 на этом скриншоте) Вторая команда - получить тактовые частоты, которые поддерживает ваша карта (без разгона): </p>
+</p>
+<p>
+<a href="items/examples/cmd_pstate.jpg" target="_blank">
+<img src="items/examples/cmd_pstate.jpg" alt="cmd_pstate"></a>
+</p>
+
+
+<code>nvidia-smi.exe -q -d SUPPORTED_CLOCKS|more</code>
+
+<p>Просто запишите два первых числа разгона (память и графика). С нашей картой это 3505 МГц / 1506 МГц. Затем вы можете переключиться в состояние P0, используя следующую команду:
+</p>
+<p>
+<a href="items/examples/cmd_supported.jpg" target="_blank">
+<img src="items/examples/cmd_supported.jpg" alt="cmd_supported"></a>
+</p>
+
+<div>
+<p>nvidia-smi.exe -ac 3505,1506</p>
+</div>
+<p>Если вы теперь проверяете с помощью 'nvidia-smi.exe -q -d PERFORMANCE', вы увидите, что ваша карта находится в состоянии P0. </p>
+<p>Теперь запустите MSI afterburner.</p>
+<p>Вы увидите, что ваша карта не на частоте GPU, которую вы вручную установили с помощью nvidia-smi. </p>
+<p>В нашем случае - 1404/3505. </p>
+<p>Если вы вручную передвинете ползунок Core Clock, вы можете установить графический процессор на нужную частоту (для нас  это  +102). </p>
+<p>В этот момент вы будете использовать максимальную частоту (и хэшрейт), которую поддерживает ваша карта <strong>без разгона.</strong></p>
+<p>Если вы продолжите сдвигать тактовую частоту ядра (например, +123), частота не пойдет дальше, но вы будете понижать напряжение своей карты (у нас 1212 мВ по умолчанию, установка +123 МГц переключится на 1187 мВ). </p>
+<p>Пониженное напряжение может быть хорошим решением, поскольку ваша карта будет потреблять меньше электроэнергии, но может быть нестабильной, так как для работы высоких частот требуется больше питания. </p>
+<p>Если вы сохраните в MSI некоторые настройки в профили (например, + 131 МГц GPU / + 50 МГц память) и примените их, то вы разгоните свою карту. Напряжение будет установлено на заводскую настройку (1212 мВ в нашем случае), но графический процессор и память будут разогнаны. </p>
+<p>Этот параметр переводит нашу карту в 1535/3557 (при использовании 100% мощности). </p>
+<p>Это наша обычная настройка для майнинга, достижение 21 MH/s без ошибок OC на Claymore.</p>
+
+<p>
+<a href="items/examples/mining.jpg" target="_blank">
+<img src="items/examples/mining.jpg" alt="mining"></a>
+</p>
+
+<p>Надеемся, что это руководство поможет вам получить некоторые драгоценные MH/s.</p>
+
+
+<p class="vaz2">Проект Claymore представляет самые <strong>последние версии</strong> программного обеспечения (исправляет все ошибки и баги  предыдущих версий)! Поэтому если у Вас <strong>старая</strong> версия, мы настоятельно советуем <strong>скачать</strong> последнюю версию Claymore's по ссылкам ниже, так как с каждым выходом новой версии добыча Эфира становится <strong>выгоднее</strong>!</p>
+</div>
+</section>
+<section class="eth-down">
+<div class="eth-title whitez1"><a id="download">Начните добывать Ethereum с Claymore's Dual  Miner </a></div>
+<div class="eth-download">
+	<div class="eth-flex">	
+		<div class="eth-ver">	
+		Последняя версия - v15.0
+		MD5: D50CB658CDC8A79251BB968AB25F0390 *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
+		<span class="nev2">(<a href="https://bit.ly/3fws22o">Скачать для Linux</a>)</span>	
+		</div>
+		<div class="eth-get">
+		<span class="eth-password">Пароль: claymore</span>
+		<div class="eth-button down"><i class="far fa-arrow-alt-circle-down"></i>
+		<a href="https://bit.ly/2ZAYUjW">Скачать сейчас (Windows x64)</a>
+		</div>
+		<span class="eth-mirror">(<a href="https://mega.nz/file/JOoQHIpQ#AlMEFuHP9KAFqawIZBhO0UNFkL7mCKe6LX1ZO2f6VOs" target="_blank" rel="nofollow">Зеркало</a>)</span>
+		</div>	
+	</div>
+</div>
+</section>
+
+
+
+
+
+<!-- footer-->
+<section class="eth-foot">
+	<div class="">
+		<div class="eth-flex">
+			<div class="foot-itm community">
+				<p>Сообщество</p>
+				<ul>
+					<li><a href="https://blog.ethereum.org" target="_blank" rel="nofollow"><i class="fas fa-rss"></i> Блог</a>
+					</li>
+					<li><a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow"><i class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li><a href="https://www.youtube.com/user/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a>
+					</li>
+					<li><a href="https://www.reddit.com/r/ethereum" target="_blank" rel="nofollow"><i class="fab fa-reddit"></i> Reddit</a>
+					</li>
+					<li><a href="https://gitter.im/ethereum/home" target="_blank" rel="nofollow"><i class="fab fa-gitter"></i> Gitter</a>
+					</li>
+				</ul>
+			</div>
+					
+		<div class="foot-itm community">
+			<ul>
+				<li><a href="https://twitter.com/ethereum" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a>
+				</li>
+				<li><a href="https://ethereum.stackexchange.com" target="_blank" rel="nofollow"><i class="fab fa-stack-exchange"></i> Stack Exchange</a>
+				</li>
+				<li><a href="https://www.facebook.com/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook                </a>
+				</li>
+				<li><a href="https://ethereum.meetup.com" target="_blank" rel="nofollow"><i class="fab fa-meetup"></i> Встречи</a>
+				</li>
+			</ul>
+		</div>
+		
+			<div class="foot-itm developer-resources">
+			<p>Ресурсы для разработчиков</p>
+			<ul>
+				<li>What is Ether? <a href="#FAQ">Read our FAQ</a></li>
+				<li>Browse our source code on <a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow">GitHub</a></li>
+				<li>Read the <a href="http://www.ethdocs.org" target="_blank" rel="nofollow">documentation</a>
+		or <a href="https://github.com/ethereum/wiki/wiki" target="_blank" rel="nofollow">wiki</a></li>
+		<li>Learn <a href="https://solidity.readthedocs.io/en/v0.5.14/" target="_blank" rel="nofollow">Solidity</a></li>
+		<li>See the latest <a href="https://ethstats.net" target="_blank" rel="nofollow">data and network stats</a>
+		</li>
+		<li>Download our <a href="https://www.ethereum.org/assets" rel="nofollow">logo assets </a></li>
+		<li>Want to write about Ethereum? <a href="mailto:press@ethereum.org">Press inquiries</a>
+		</li>
+		<li>switch to the <a href="/ru">English language.</a>
+		</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-post-foot clearfix">
+	<div class="eth-vi2">
+		<div class="nev3 eth-left">Note, when downloading the Claymore Miner, Windows may issue a warning, but if you used Claymore Dual Miner download link you can ignore this.
+		</div>
+
+		<div class="nev3 eth-right">Disclaimer: This isn't an official Claymores site.  No binary files were affected.
+
+		All rights belong to their respective owners. © 2018-2021
+		</div>
+	</div>
+	<a href="https://claymoredualminer.com/cookie" class="eth-policy" target="_blank" rel="nofollow">Cookie Policy</a>
+</section>
+  </div>
+</div>  </body>
+</html>

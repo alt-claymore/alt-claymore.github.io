@@ -9,7 +9,7 @@
 <meta charset="utf-8" />
 
 
-<link rel="canonical" href="https://claymoredualminer.com" />  
+<link rel="canonical" href="https://claymoredualminer.com/nicehash/en" />  
 <meta name="msvalidate.01" content="4D29B89352904BF881174DF62BFF7B67" />
 <meta name="yandex-verification" content="4636c8aca188e480" />
 
@@ -138,7 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<h1>Claymore's Dual Ethereum AMD+NVIDIA GPU Miner
 			</h1>
 			<p class="eth-fast"><span class="green">Fastest Ethereum</span>/Ethash miner with <span class="green">lowest devfee</span></p> 
-			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://mega.nz/file/qLIkwDzY#AT8FvqJ34qtO1lD9hZ41Nd_9ncqBZZhL34c-Dt9YDgk">Download Now</a>
+			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases/download/15.0/Claymore.s.dual.ethereum.miner.v15.0.-.widows.Password-claymore.zip">Download Now</a>
 			</div>
 			</div>
 		</div>
@@ -230,15 +230,15 @@ EthDcrMiner64.exe -epool eu1.ethermine.org:4444 -eworker <span class="eth-grn">Y
 	<div class="eth-flex">	
 		<div class="eth-ver">	
 		Latest version is v15.0
-		MD5: D50CB658CDC8A79251BB968AB25F0390 *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
-		<span class="nev2">(<a href="https://bit.ly/3fws22o">Download for Linux</a>)</span>	
+		MD5: 0056885E54A3D7B0C254193C71F7F40F *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
+		<span class="nev2">(<a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases/download/15.0/Claymore.s.Dual.Ethereum.AMD+NVIDIA.GPU.Miner.v15.0.-.LINUX.zip">Download for Linux</a>)</span>	
 		</div>
 		<div class="eth-get">
 		<span class="eth-password">Password: claymore</span>
 		<div class="eth-button down"><i class="far fa-arrow-alt-circle-down"></i>
-		<a href="https://mega.nz/file/qLIkwDzY#AT8FvqJ34qtO1lD9hZ41Nd_9ncqBZZhL34c-Dt9YDgk">Download Now (Windows x64)</a>
+		<a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases/download/15.0/Claymore.s.dual.ethereum.miner.v15.0.-.widows.Password-claymore.zip">Download Now (Windows x64)</a>
 		</div>
-		<span class="eth-mirror">(<a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow">mirror</a>)</span>
+		<span class="eth-mirror">(<a href="https://mega.nz/#!LPgnBQya!Kh5qEn2sqy0RWQ9oZbBqPqiIvRiY08jbgtyJAA0JzNc" target="_blank" rel="nofollow">mirror</a>)</span>
 		</div>	
 	</div>
 </div>
@@ -334,7 +334,7 @@ EthDcrMiner64.exe -epool eu1.ethermine.org:4444 -eworker <span class="eth-grn">Y
 
 		<div class="nev3 eth-right">Disclaimer: This isn't an official Claymores site.  No binary files were affected.
 
-		All rights belong to their respective owners. © 2018-2021
+		All rights belong to their respective owners. © 2018-2019
 		</div>
 	</div>
 	<a href="https://claymoredualminer.com/cookie" class="eth-policy" target="_blank" rel="nofollow">Cookie Policy</a>

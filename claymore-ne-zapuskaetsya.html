@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<title>Не запускается Claymore на Windows 10 [Решено,2021]</title>
+<meta charset="utf-8" />
+<link rel="canonical" href="https://claymoredualminer.com/claymore-ne-zapuskaetsya" /> 
+<link rel="shortcut icon" href="items/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="Claymore Dual Miner поддерживает майнинг монет на основе Ethash алгоритма (например, Ethereum) с 1% комисией." />
+
+<link rel="stylesheet" href="/css/ETH.css">
+<link rel="stylesheet" href="/css/global.base.css">
+<link rel="stylesheet" href="/css/global.styles.css">
+<link rel="stylesheet" href="/css/at.layout.css">
+
+
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-2');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53083204, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53083204" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika domain -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56512528, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56512528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<meta name="yandex-verification" content="1facbca6aff9a0eb" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKVRMS2');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics domain -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-4');
+</script>
+
+</head>
+<body>
+
+
+<div id="page-wrapper">
+  <div id="page" class="page at-mt eth-inner">
+
+
+<div id="menu-bar" class="nav clearfix">
+	<nav id="block-menu-menu-primary-menu" class="block block-menu menu-wrapper menu-bar-wrapper clearfix at-menu-toggle block-menu-primary-menu eth-menu" role="navigation">        
+
+		<div class="menu-toggle">
+			<ul class="menu clearfix">
+			<li class="leaf"><a href="https://claymoredualminer.com/ru" title="">Главная</a></li>
+				<li class="first leaf"><a href="#start" title="">Быстрый старт</a></li>
+				<li class="leaf"><a href="#download" title="">Скачать</a></li>
+
+			</ul>
+		</div>  
+	</nav>
+	</div>
+
+<section class="eth-header">
+	<div class="eth-header-flex">
+		<div class="eth-header-center eth-vi">
+			<div class="eth-header-composition">
+			<h2>Claymore's Dual Ethereum AMD+NVIDIA GPU Miner</h2>
+			<p class="eth-fast"><span class="green">Самый быстрый Ethereum</span>/Ethash майнер с <span class="green">самой низкой комиссией</span></p> 
+			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://bit.ly/2ZAYUjW">Скачать</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-art">
+<H1 class="eth-title"><a id="start">Не запускается майнер Claymore, каковы причины?</a></h1>
+	<div class="eth-vi2">
+<p>1-ое, что надо сделать, это скачать самую последнюю версию Claymore, в которой исправлены все недочеты.</p>
+<p>2-ое - это убедиться, что все файлы программы целы: их не заблокировал защитник Windows, или любое другое ПО, они не удалилсь при автоматическом обновлении системы и т.д.</p>
+<p>Перекачайте майнер и убедитесь, что все его файлы на месте.</p>
+<p>Дальше надо дописать параметр <code class="red">pause</code> в .bat файле, через который Вы майните криптовалюту.</p>
+<h3>Пример</h3>
+<img src="items/crash/pause2.png" alt="pause">	
+<p>
+Теперь Claymore не закроется сразу же, а отобразит код и причину ошибки.
+</p>
+<img src="items/crash/close.png" alt="close">	
+<p>
+Теперь посмотрите что Вам пишет консоль майнера. Если информации нет, то можно посмотреть Журнал событий Windows.
+</p>
+<p> 
+</p>
+
+<h2>Основные советы</h2>
+<div class="video mar">
+<iframe width="789" height="444" src="https://www.youtube.com/embed/3O4bipBCFRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<h2>Обновите версию Claymore's Dual Miner</h2>
+
+<p>Первым шагом при устранении неполадок является обновление Claymore Miner до последней версии. Посетите <a href="https://claymoredualminer.com/ru">страницу загрузки</a> на веб-сайте. Текущая установленная версия отображается в верху приложения, либо допишите –v в конце батника.</p>
+
+<h2>Обновите драйверы видеокарт и отключите разгон</h2>
+
+<p>Убедитесь, что используются либо самые последние драйверы видеокарт, либо драйверы графического процессора, рекомендованные автором программного обеспечения для майнинга - Adrenalin Edition 18.6.1.</p>
+
+<p>Если выполняется разгон, восстановите тактовую частоту до значений по умолчанию, чтобы обеспечить стабильную базовую линию, прежде чем приступать к разгону.</p>
+
+<h2>Если программное обеспечение не запускается</h2>
+
+<p>Если Claymore Miner запускаются неправильно, пожалуйста, просмотрите любые сообщения об ошибках, так как они часто содержат указания на проблему.</p>
+
+<h2>«Системе не удается найти указанный файл» или «Имя каталога неверно».</h2>
+Если отображается эта ошибка, Claymore Miner попытался загрузить программное обеспечение для майнинга, но программное обеспечение безопасности на вашем компьютере удалило программное обеспечение майнера до того, как Claymore Miner смог его запустить. </p>
+
+<p>Некоторые загружаемые программы для майнинга могут быть помечены как угрозы в соответствии с программным обеспечением безопасности и антивирусами, так как они иногда используются вредоносными программами. Пожалуйста, следуйте инструкции по <a href="https://support.awesomeminer.com/support/solutions/articles/35000085974-configure-exclusions-in-windows-defender">настройке исключений в Защитнике Windows</a> .</p>
+
+<h2>Your system does not support CUDA 9.0 API" или "no CUDA-capable device is detected"</h2>
+Эта ошибка указывает на то, что драйверы графического процессора <strong>устарели</strong> . Пожалуйста, посетите веб-сайт nVidia для обновления драйверов графического процессора.<br />
+"All devices disabled, cannot mine!" или "Failed to init GPU thread 0, disabling device 0" или "All devices disabled, cannot mine!"<br />
+Claymore предназначен только для использования с графическим процессором AMD и Nvidia, но иногда он может обнаружить встроенный графический процессор Intel и попробовать использовать это устройство. Чтобы предотвратить это, добавьте аргумент командной строки в Claymore. </p>
+
+<h2> "Stratum authorization error" или "Authorization failed"</h2>
+
+<p>Это указывает на то, что программное обеспечение для майнинга не может подключиться к пулу с настроенным именем работника или адресом кошелька. Для пулов, для которых в качестве идентификатора требуется адрес, убедитесь, что указан действительный адрес монеты.</p>
+
+<p>Для пулов, которые сначала требуют регистрации (например, MiningPoolHub), убедитесь, что одно и то же имя пользователя для веб-сайта пула используется вместе с рабочим именем. Типичное имя работника может быть: yourusername.1. Пожалуйста, обратитесь к документации пула для деталей.</p>
+
+<h2>The code execution cannot proceed bacause MSVCR120.DLL/VCRUNTIME140.DLL was not found.</h2>
+
+<p>См. Раздел о предварительных условиях для программного обеспечения для майнинга ниже, чтобы найти ссылки для загрузки отсутствующих пакетов.</p>
+
+<h2>Failed to start miner process: InvalidApplication</h2>
+
+<p>Для этого программного обеспечения для майнинга требуется 64-разрядная версия Windows, в то время как вы работаете в 32-разрядной версии.</p>
+
+<h2>"Process has exited, so the requested information is not available" или no messages at all</h2>
+
+<p>Это указывает на сбой или мгновенное отключение запущенного программного обеспечения для майнинга. Пожалуйста, убедитесь, что предварительные условия для программного обеспечения для майнинга установлены. (драйвера, Visual C ++ для Visual Studio 2013)</p>
+
+<p>В случае, если проблема не может быть решена, свяжитесь со службой поддержки Claymore Miner.</p>
+
+<p><strong>Поиск проблемы:</strong></p>
+
+<ul>
+	<li>Отключите любое программное обеспечение безопасности полностью. Хотя часто бывает достаточно указать папку, которую следует исключить из сканирования, в некоторых случаях программное обеспечение безопасности может помешать стабильности процесса майнинга.</li>
+</ul>
+
+<p><strong>Что сообщить?</strong></p>
+
+<p><strong>Файлы </strong> журнала: укажите файл журнала Claymore Miner через панель инструментов Инструменты -&gt; Файл журнала. Либо logfile.txt в папке с программой.</p>
+
+<p><strong>Описание</strong>: включите подробное описание проблемы, а также время ее возникновения. Не отправляйте файлы журнала, не указав, что искать. Также укажите, какие шаги по устранению неполадок уже предприняты.</p>
+
+<h2>Общие советы по устранению неполадок в майнинге</h2>
+
+<p>Первым шагом при устранении неполадок, из-за которых не работает майнинг графических процессоров, является обеспечение актуальности драйверов графического процессора. Также важно убедиться, что разгон не приводит к нестабильной работе графического процессора.</p>
+
+<p>Для вопросов о том, какие параметры командной строки использовать для майнинга, обратитесь к файлу readme или документации. Если информация не может быть найдена, пожалуйста, свяжитесь с командой разработчиков программного обеспечения для майнинга.</p>
+
+
+<h2>Другие причины</h2>
+<p>
+Иногда эти ошибки могут быть исправлены путем переустановки драйверов GPU.
+В некоторых случаях помогает  сброс системы
+</p>
+<h3>Резюмируем</h3>
+<ol>
+<li>Всякий раз, когда программа вылетает при запуске - редактируйте .bat файл  и добавляйте  строку внизу файла с ключем - <code>pause</code>. Поэтому, если произошла ошибка, Claymore не закроет окно, и вы сможете прочитать информацию об ошибке. </li>
+<li>Вы используете Windows 10, вероятно, с включенным  ​​Защитником Windows (не сторонней антивирусной программой), иногда защитник распознает майнер как вирус (не знаем почему) и удаляет файл «EthDcrMiner64.exe», содержащийся в папке  Клеймора. </li>
+<li>Добавьте в Защитник Windows исключение для папки, в которой содержится ваш Claymore майнер, а затем повторно загрузите программу Claymores или откройте старый zip-файл (то, что вы скачали для майнера), извлеките файл «EthDcrMiner64.exe» и скопируйте его. Но надежнее скачать сборку программы с настроенными .bat файлами заново, что бы точно знать, что все нужные файла присутствуют.</li>
+<li>Возможно у Вас отсутствует или поврежден видеодрайвер. Проверте его в диспетчере устройств
+<p>
+<img src="items/crash/viletaet.png" alt="close">
+</p>
+Драйвер должен отображаться без каких-либо восклицательных знаков.
+</li>
+<li>Возможны проблемы с DAG-файлом.
+Вы должны обновить майнер до последней версии. На данный момент слишком большой размер DAG, и старые версии не работают.
+</li>
+<li>
+Попробуйте запустить Windows не с встроенной графики, а с видеокарты.
+</li>
+<li>Проверьте аппаратыне проблемы: блок питания, райзера, память на наличие ошибок, жесткий диск на наличие битых секторов.
+</li>
+	<li>Проверьте синтаксис .bat файла</li>
+	<li>Возможен перегрев</li>
+	<li>При автообновлении ОС повредились/удалились файлы, связанные с майнингом</li>
+	<li>Посмотрите переменные среды</li>
+	<li>Увеличьте файл подкачки</li>
+	<li>Возможен переразгон</li>
+	<li>Проверьте контакты райзеров, блока питания и т.д.</li>
+	<li>Посмотрите, есть ли восклицательные знаки в диспетчере устройств</li>
+	<li>Если ничего не помогает - переустановите операционную систему с нуля.</li>
+</ol>
+Надеемся, что это решит Вашу проблему.
+
+
+<p><p class="vaz2">Проект Claymore представляет самые <strong>последние версии</strong> программного обеспечения (исправляет все ошибки и баги  предыдущих версий)! Поэтому если у Вас <strong>старая</strong> версия, мы настоятельно советуем <strong>скачать</strong> последнюю версию Claymore's по ссылкам ниже, так как с каждым выходом новой версии добыча Эфира становится <strong>выгоднее</strong>!</p>
+</div>
+</section>
+
+<section class="eth-down">
+<div class="eth-title whitez1"><a id="download">Начните добывать Ethereum с Claymore's Dual  Miner </a></div>
+<div class="eth-download">
+	<div class="eth-flex">	
+		<div class="eth-ver">	
+		Последняя версия - v15.0
+		MD5: D50CB658CDC8A79251BB968AB25F0390 *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
+		<span class="nev2">(<a href="https://bit.ly/3fws22o">Скачать для Linux</a>)</span>	
+		</div>
+		<div class="eth-get">
+		<span class="eth-password">Пароль: claymore</span>
+		<div class="eth-button down"><i class="far fa-arrow-alt-circle-down"></i>
+		<a href="https://bit.ly/2ZAYUjW">Скачать сейчас (Windows x64)</a>
+		</div>
+		<span class="eth-mirror">(<a href="https://mega.nz/file/JOoQHIpQ#AlMEFuHP9KAFqawIZBhO0UNFkL7mCKe6LX1ZO2f6VOs" target="_blank" rel="nofollow">Зеркало</a>)</span>
+		</div>	
+	</div>
+</div>
+</section>
+<section>
+</section>
+
+
+
+
+<!-- footer-->
+<section class="eth-foot">
+	<div class="">
+		<div class="eth-flex">
+			<div class="foot-itm community">
+				<p>Сообщество</p>
+				<ul>
+					<li><a href="https://blog.ethereum.org" target="_blank" rel="nofollow"><i class="fas fa-rss"></i> Блог</a>
+					</li>
+					<li><a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow"><i class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li><a href="https://www.youtube.com/user/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a>
+					</li>
+					<li><a href="https://www.reddit.com/r/ethereum" target="_blank" rel="nofollow"><i class="fab fa-reddit"></i> Reddit</a>
+					</li>
+					<li><a href="https://gitter.im/ethereum/home" target="_blank" rel="nofollow"><i class="fab fa-gitter"></i> Gitter</a>
+					</li>
+				</ul>
+			</div>
+					
+		<div class="foot-itm community">
+			<ul>
+				<li><a href="https://twitter.com/ethereum" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a>
+				</li>
+				<li><a href="https://ethereum.stackexchange.com" target="_blank" rel="nofollow"><i class="fab fa-stack-exchange"></i> Stack Exchange</a>
+				</li>
+				<li><a href="https://www.facebook.com/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook                </a>
+				</li>
+				<li><a href="https://ethereum.meetup.com" target="_blank" rel="nofollow"><i class="fab fa-meetup"></i> Встречи</a>
+				</li>
+			</ul>
+		</div>
+		
+			<div class="foot-itm developer-resources">
+			<p>Ресурсы для разработчиков</p>
+			<ul>
+				<li>What is Ether? <a href="#FAQ">Read our FAQ</a></li>
+				<li>Browse our source code on <a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow">GitHub</a></li>
+				<li>Read the <a href="http://www.ethdocs.org" target="_blank" rel="nofollow">documentation</a>
+		or <a href="https://github.com/ethereum/wiki/wiki" target="_blank" rel="nofollow">wiki</a></li>
+		<li>Learn <a href="https://solidity.readthedocs.io/en/v0.5.14/" target="_blank" rel="nofollow">Solidity</a></li>
+		<li>See the latest <a href="https://ethstats.net" target="_blank" rel="nofollow">data and network stats</a>
+		</li>
+		<li>Download our <a href="https://www.ethereum.org/assets" rel="nofollow">logo assets </a></li>
+		<li>Want to write about Ethereum? <a href="mailto:press@ethereum.org">Press inquiries</a>
+		</li>
+		<li>switch to the <a href="/ru">English language.</a>
+		</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-post-foot clearfix">
+	<div class="eth-vi2">
+		<div class="nev3 eth-left">Note, when downloading the Claymore Miner, Windows may issue a warning, but if you used Claymore Dual Miner download link you can ignore this.
+		</div>
+
+		<div class="nev3 eth-right">Disclaimer: This isn't an official Claymores site.  No binary files were affected.
+
+		All rights belong to their respective owners. © 2018-2021
+		</div>
+	</div>
+	<a href="https://claymoredualminer.com/cookie" class="eth-policy" target="_blank" rel="nofollow">Cookie Policy</a>
+</section>
+  </div>
+</div>  </body>
+</html>

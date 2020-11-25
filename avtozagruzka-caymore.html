@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="ru" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="ru" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+<head>
+<title>Автозагрузка Claymore в Windows 10. [Решено, 2021]</title>
+<meta charset="utf-8" />
+<link rel="canonical" href="https://claymoredualminer.com/avtozagruzka-caymore" /> 
+<link rel="shortcut icon" href="items/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="Claymore Dual Miner поддерживает майнинг монет на основе Ethash алгоритма (например, Ethereum) с 1% комисией." />
+
+<link rel="stylesheet" href="/css/ETH.css">
+<link rel="stylesheet" href="/css/global.base.css">
+<link rel="stylesheet" href="/css/global.styles.css">
+<link rel="stylesheet" href="/css/at.layout.css">
+
+
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="all" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-2');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53083204, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53083204" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Yandex.Metrika domain -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(56512528, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/56512528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<meta name="yandex-verification" content="1facbca6aff9a0eb" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKVRMS2');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics domain -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137173386-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137173386-4');
+</script>
+
+</head>
+<body>
+
+
+<div id="page-wrapper">
+  <div id="page" class="page at-mt eth-inner">
+
+
+<div id="menu-bar" class="nav clearfix">
+	<nav id="block-menu-menu-primary-menu" class="block block-menu menu-wrapper menu-bar-wrapper clearfix at-menu-toggle block-menu-primary-menu eth-menu" role="navigation">        
+
+		<div class="menu-toggle">
+			<ul class="menu clearfix">
+			<li class="leaf"><a href="https://claymoredualminer.com/ru" title="">Главная</a></li>
+				<li class="first leaf"><a href="#start" title="">Быстрый старт</a></li>
+				<li class="leaf"><a href="#download" title="">Скачать</a></li>
+
+			</ul>
+		</div>  
+	</nav>
+	</div>
+
+<section class="eth-header">
+	<div class="eth-header-flex">
+		<div class="eth-header-center eth-vi">
+			<div class="eth-header-composition">
+			<h2>Claymore's Dual Ethereum AMD+NVIDIA GPU Miner</h2>
+			<p class="eth-fast"><span class="green">Самый быстрый Ethereum</span>/Ethash майнер с <span class="green">самой низкой комиссией</span></p> 
+			<div class="eth-button"><i class="far fa-arrow-alt-circle-down"></i><a href="https://bit.ly/2ZAYUjW">Скачать</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-art">
+<H1 class="eth-title"><a id="start">Автозапуск Claymore</a></h1>
+	<div class="eth-vi2">
+	
+<p>Как создать пакетный файл для автоматического запуска майнинга при запуске Windows или после сбоя системы и перезагрузки. (Мы используем MSI Afterburner.) </p>
+
+<p>Пожалуйста, не пытайтесь выполнить это руководство до тех пор, пока вы не доведите до идеала андервольтинг / разгон.</p>
+
+<p class="vaz">Настройки должны быть стабильными и способными запускаться без каких-либо проблем. <br />
+Мы сохранили свои настройки в MSI Afterburner.  Установили флажок, который запускает Afterburner при запуске Windows и минимизируют его в системном трее. Мы также проверили, чтобы применялись настройки разгона при запуске.</p>
+
+<h2>Шаг 1.</h2>
+
+<p>Хорошо, прежде всего вам нужно настроить вход в Windows, чтобы вам не приходилось вводить пароль, прежде чем вы сможете увидеть рабочий стол. </p>
+
+<p>Просто зайдите в парамтеры и аккаунты. </p>
+<p>Создайте новую учетную запись или измените свою учетную запись, чтобы не иметь пароля (оставьте это поле пустым). Перейдите вниз, чтобы войти в параметры, выберите «никогда» в поле, которое спрашивает, когда Windows должен требовать ввода пароля. Прокрутите вниз, и вы увидите соответствующие настройки. Нажмите на них. Прокрутите вниз там, где написано «показать фоновый рисунок Windows ....», отключите его. Сделайте все это, чтобы пропустить экран входа при загрузке или перезагрузке Windows. Это то, что нам нужно. </p>
+<img src="items/crash/password.png" alt="password">	
+
+<p>Пакетный файл не будет выполнен сам по себе, если вы этого не сделаете. Он будет ждать, пока вы войдете в систему с вашим паролем, а затем запустит bat файл майнинга.</p>
+
+<h2>Шаг 2.</h2>
+<img src="items/crash/restore on ac power loss.jpg" alt="restore on ac power loss">	
+<p>Убедитесь, что ваша материнская плата настроена на автоматическую загрузку. В основном это настройка "Restore on AC/Power Loss" , которая позволяет этому случиться.
+</p>
+<img src="items/crash/motherboard.png" alt="motherboard">	
+
+<h2>Шаг 3.</h2>
+
+<p> В файле readme в опции -r, если вы включите -r 1, то майнер выполнит файл reboot.bat (перезагрузку). Он также включает в себя код shutdown / r / t 5 / f. </p>
+
+<p>Откройте новый блокнот и вставьте этот код. Сохраните его как reboot.bat.</p>
+
+<p>Убедитесь, что вы не сохраняете его как текстовый файл, убедитесь, что это исполняемый файл .bat. <br />
+Теперь откройте новый файл блокнота и введите следующую команду 
+</p>
+
+<h3>Пример файла автозагрузки</h3>
+<blockquote><pre><code>
+echo off 
+start / d: «Вот куда уходит ваш адрес start.bat». 
+Пример start.bat : 
+echo off
+
+</code></pre></blockquote>
+
+<h3>Пример файла автозагрузки</h3>
+<p>start /d "C:\Users\Desktop\my files\Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows" <strong>3_Ethereum-ethermine.bat</strong><br />
+Сохраните файл так, как вы хотите его назвать. (Убедитесь, что вы используете <strong>кавычки</strong>, до C: и после имени папки, в которой находится ваш пакетный файл) </p>
+
+<h2>Шаг 4.</h2>
+<p>Теперь щелкните правой кнопкой мыши по этому файлу и создайте ярлык. <br />
+Щелкните правой кнопкой мыши по этому ярлыку и выберите вырезать. <br />
+Перейдите в окно пуск  и  в разделе Служебные – Windows выберите пункт <strong>Выполнить</strong>. <br />
+Когда появится окно «Выполнить», введите <strong>shell:startup</strong><br /></p>
+<img src="items/crash/выполнить.png" alt="выполнить">	
+<p>Теперь вы должны оказаться в папке автозагрузки, где вы можете добавить пакетные файлы. <br />
+Щелкните правой кнопкой мыши и выберите «Вставить».<br />
+Таким образом, теоретически, когда ваш майнер аварийно завершает работу и выполняет reboot.bat, ваша система перезагружается, при запуске системы она запускает файл bat, который вы только что создали. </p>
+<img src="items/crash/startup.png" alt="startup">	
+
+<p>Если вы используете MSI Afterburner, ваши настройки уже будут загружены, и вы снова будете заниматься майнингом.</p>
+	
+	
+<p>	
+Файл reboot.bat предназначен для перезагрузки фермы. Но Вы не должны делать автоматический перезапуск в случае возникновения проблем с майнингом. 
+</p>
+<p>
+Перезапуск не устранит ни одной из <a href="https://claymoredualminer.com/claymore-vyletaet">основных причин сбоев.</a></p>
+
+<h2>В каких случаях использовать Reboot.bat</h2>
+<ul>
+<li>если со временем скорость хэширования падает примерно на 1-1,5 m/hs на карту
+</li>
+<li>нечастые / разовые сбои видеокарты
+</li>
+<li>ваши фермы установлены удаленно и к ним затруднен доступ
+</li>
+</ul>
+<h2>Как использовать Reboot.bat</h2>
+<p>
+Для того, что бы запустить перезагрузку, нужно отредактировать .bat файл с нужной монетой и допусать в него ключ <code class="grn">-r 1</code>
+</p>
+<p>
+Команда <code class="grn">-r 1</code> закрывает майнер и запускает файл «reboot.bat» («reboot.bash» или «reboot.sh» для версии Linux) в каталоге майнера (если файл существует, скачать каталог с этим файлом можно ниже), если произошел сбой какого-либо графического процессора.</p>
+<h3>Пример с ключом <code class="grn">-r 1</code></h3>
+Не забудьте добавить timeout в самое начало батника, что бы он запустился не сразу, а как только система будет готова. Тем самым MSI Afterburner успеет запустить разгон и управление вентиляторами, прежде, чем начнется майннг
+<blockquote><pre><code>
+<span class="grn">timeout 120</span>
+EthDcrMiner64.exe -epool eth-eu2.nanopool.org:9999 -ewal 0x1a0e2c4cd699cee12672adc223fdb30b93253eba -eworker rig1 -epsw x -mode 1 <span class="grn">-r 1</span> -dbg -1 -mport 0 -etha 0 -retrydelay 3 -ftime 45 -tt 70 -ttli 79 -tstop 82 -fanmin 30
+pause
+</code></pre></blockquote>
+<p>
+Таким образом, батник с нужной Вам монетой выозовет файл «reboot.bat», если что-то пойдет не так с майнингом. Вы можете создать сами файл «reboot.bat» и выполнить некоторые действия, например, перезагрузить систему, если вы поместите туда следующую строку: <code>«shutdown / r / t 5 / f».</code>
+</p>
+
+<h3>Пример</h3>
+
+
+	
+<p>
+Теперь посмотрите видеоурок.
+</p>
+<p> 
+</p>
+
+
+
+<div class="video mar">
+<iframe width="789" height="444" src="https://www.youtube.com/embed/OLIoTe0fzK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p> Надеемся, что это решит Вашу проблему.</p> 
+
+
+<p><p class="vaz2">Проект Claymore представляет самые <strong>последние версии</strong> программного обеспечения (исправляет все ошибки и баги  предыдущих версий)! Поэтому если у Вас <strong>старая</strong> версия, мы настоятельно советуем <strong>скачать</strong> последнюю версию Claymore's по ссылкам ниже, так как с каждым выходом новой версии добыча Эфира становится <strong>выгоднее</strong>!</p>
+</div>
+</section>
+
+<section class="eth-down">
+<div class="eth-title whitez1"><a id="download">Начните добывать Ethereum с Claymore's Dual  Miner </a></div>
+<div class="eth-download">
+	<div class="eth-flex">	
+		<div class="eth-ver">	
+		Последняя версия - v15.0
+		MD5: D50CB658CDC8A79251BB968AB25F0390 *Claymore's Dual Ethereum  AMD+NVIDIA GPU Miner v15.0 - Windows.zip
+		<span class="nev2">(<a href="https://bit.ly/3fws22o">Скачать для Linux</a>)</span>	
+		</div>
+		<div class="eth-get">
+		<span class="eth-password">Пароль: claymore</span>
+		<div class="eth-button down"><i class="far fa-arrow-alt-circle-down"></i>
+		<a href="https://bit.ly/2ZAYUjW">Скачать сейчас (Windows x64)</a>
+		</div>
+		<span class="eth-mirror">(<a href="https://mega.nz/file/JOoQHIpQ#AlMEFuHP9KAFqawIZBhO0UNFkL7mCKe6LX1ZO2f6VOs" target="_blank" rel="nofollow">Зеркало</a>)</span>
+		</div>	
+	</div>
+</div>
+</section>
+<section>
+</section>
+
+
+
+
+<!-- footer-->
+<section class="eth-foot">
+	<div class="">
+		<div class="eth-flex">
+			<div class="foot-itm community">
+				<p>Сообщество</p>
+				<ul>
+					<li><a href="https://blog.ethereum.org" target="_blank" rel="nofollow"><i class="fas fa-rss"></i> Блог</a>
+					</li>
+					<li><a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow"><i class="fab fa-github"></i> GitHub</a>
+					</li>
+					<li><a href="https://www.youtube.com/user/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i> YouTube</a>
+					</li>
+					<li><a href="https://www.reddit.com/r/ethereum" target="_blank" rel="nofollow"><i class="fab fa-reddit"></i> Reddit</a>
+					</li>
+					<li><a href="https://gitter.im/ethereum/home" target="_blank" rel="nofollow"><i class="fab fa-gitter"></i> Gitter</a>
+					</li>
+				</ul>
+			</div>
+					
+		<div class="foot-itm community">
+			<ul>
+				<li><a href="https://twitter.com/ethereum" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i> Twitter</a>
+				</li>
+				<li><a href="https://ethereum.stackexchange.com" target="_blank" rel="nofollow"><i class="fab fa-stack-exchange"></i> Stack Exchange</a>
+				</li>
+				<li><a href="https://www.facebook.com/ethereumproject" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i> Facebook                </a>
+				</li>
+				<li><a href="https://ethereum.meetup.com" target="_blank" rel="nofollow"><i class="fab fa-meetup"></i> Встречи</a>
+				</li>
+			</ul>
+		</div>
+		
+			<div class="foot-itm developer-resources">
+			<p>Ресурсы для разработчиков</p>
+			<ul>
+				<li>What is Ether? <a href="#FAQ">Read our FAQ</a></li>
+				<li>Browse our source code on <a href="https://github.com/Claymore-Dual/Claymore-Dual-Miner/releases" target="_blank" rel="nofollow">GitHub</a></li>
+				<li>Read the <a href="http://www.ethdocs.org" target="_blank" rel="nofollow">documentation</a>
+		or <a href="https://github.com/ethereum/wiki/wiki" target="_blank" rel="nofollow">wiki</a></li>
+		<li>Learn <a href="https://solidity.readthedocs.io/en/v0.5.14/" target="_blank" rel="nofollow">Solidity</a></li>
+		<li>See the latest <a href="https://ethstats.net" target="_blank" rel="nofollow">data and network stats</a>
+		</li>
+		<li>Download our <a href="https://www.ethereum.org/assets" rel="nofollow">logo assets </a></li>
+		<li>Want to write about Ethereum? <a href="mailto:press@ethereum.org">Press inquiries</a>
+		</li>
+		<li>switch to the <a href="/ru">English language.</a>
+		</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="eth-post-foot clearfix">
+	<div class="eth-vi2">
+		<div class="nev3 eth-left">Note, when downloading the Claymore Miner, Windows may issue a warning, but if you used Claymore Dual Miner download link you can ignore this.
+		</div>
+
+		<div class="nev3 eth-right">Disclaimer: This isn't an official Claymores site.  No binary files were affected.
+
+		All rights belong to their respective owners. © 2018-2021
+		</div>
+	</div>
+	<a href="https://claymoredualminer.com/cookie" class="eth-policy" target="_blank" rel="nofollow">Cookie Policy</a>
+</section>
+  </div>
+</div>  </body>
+</html>
